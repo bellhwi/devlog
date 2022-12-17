@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Card = ({ post }: any) => {
-  // const id = post.title.toLowerCase().replaceAll(' ', '-').replace(/\?/g, '')
-
   return (
     <div className='card card-compact w-full bg-base-100 shadow-xl mt-4 rounded-sm'>
       <figure className='relative w-full h-96 mb-2'>
@@ -17,7 +15,7 @@ const Card = ({ post }: any) => {
         </Link>
       </figure>
       <div className='card-body'>
-        <Link href='/post'>
+        <Link href={`/posts/${post.id}`}>
           <h2 className='card-title'>{post.title}</h2>
           <p className='mt-2'>{post.desc}</p>
         </Link>

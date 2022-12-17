@@ -10,8 +10,6 @@ const post = () => {
   const id: any = router.query['id']
 
   return (
-    // <h1>Hi</h1>
-
     <div className='container w-11/12 mx-auto'>
       <Head>
         <title>{posts[id].title}</title>
@@ -42,7 +40,7 @@ const post = () => {
               src={posts[id].profileImg}
               alt='profileImage'
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', borderRadius: '50%' }}
             />
           </div>
           <p className='font-bold'>{posts[id].author}</p>

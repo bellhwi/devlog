@@ -1,8 +1,7 @@
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
-import Filter from '../components/Filter'
 import Head from 'next/head'
-
+import Footer from '../components/Footer'
 export default function Home() {
   return (
     <div className='container w-11/12 mx-auto'>
@@ -15,8 +14,8 @@ export default function Home() {
         <meta name='og:title' content="Developer's Blog Portfolio" />
       </Head>
       <Navbar home />
-      <Filter />
       <Main />
+      <Footer />
     </div>
   )
 }

@@ -1,25 +1,26 @@
 import { AiOutlineRise, AiOutlineFieldTime } from 'react-icons/ai'
 import { BiDotsVerticalRounded } from 'react-icons/bi'
 
-const Filter = () => {
+const Filter = ({ trendingTab, setTrendingTab }: any) => {
   return (
     <div className='flex items-center mt-8'>
-      <div className='flex items-center mr-2'>
+      <div
+        className={`flex items-center cursor-pointer mr-4 ${
+          trendingTab ? 'font-bold border-b border-current p-1' : null
+        }`}
+        onClick={() => !trendingTab && setTrendingTab(true)}
+      >
         <AiOutlineRise />
-        <h4 className='text-sm ml-0.5'>Trending</h4>
+        <h4 className='ml-1'>Trending</h4>
       </div>
-      <div className='flex items-center'>
+      <div
+        className={`flex items-center cursor-pointer ${
+          trendingTab ? null : 'font-bold border-b border-current p-1'
+        }`}
+        onClick={() => trendingTab && setTrendingTab(false)}
+      >
         <AiOutlineFieldTime />
-        <h4 className='text-sm ml-0.5'>Latest</h4>
-      </div>
-      <div>
-        <select className='select w-full max-w-xs'>
-          <option defaultValue='all'>All time</option>
-          <option value='today'>Today</option>
-          <option value='week'>This week</option>
-          <option value='month'>This month</option>
-          <option value='year'>This year</option>
-        </select>
+        <h4 className='ml-1'>Latest</h4>
       </div>
       <div className='grow'></div>
       <div className='dropdown dropdown-end'>
