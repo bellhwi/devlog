@@ -37,7 +37,7 @@ export default function About() {
           target='_blank'
           rel='noreferrer'
         >
-          Jonghwi Kim's portfolio website
+          Jonghwi Kim&apos;s portfolio website
         </a>{' '}
         projects. It is built with NextJS and Typescript. You can see the source
         code of this project on my{' '}

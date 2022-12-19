@@ -4,10 +4,18 @@ import { posts } from '../../posts'
 import { FaGithub, FaLinkedinIn, FaYoutube } from 'react-icons/fa'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 const Post = () => {
   const router = useRouter()
   const id: any = router.query['id']
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return <></>
 
   return (
     <div className='container w-11/12 mx-auto'>
