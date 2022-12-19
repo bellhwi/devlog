@@ -5,7 +5,7 @@ const posts = [
     title: 'When to Use Static Generation v.s. Server-side Rendering',
     desc: 'Before you learn more advanced Next.js features, it would be helpful to understand the basics of how Next.js works.',
     author: 'Jonghwi Kim',
-    date: '2022-12-13',
+    date: '2022-05-13',
     likes: 100,
     src: '/images/thumbnail0.jpg',
     contents: (
@@ -123,8 +123,8 @@ const posts = [
     title: 'What is Code Splitting?',
     desc: 'Developers usually split their applications into multiple pages that can be accessed from different URLs. Each of these pages becomes a unique entry point into the application.',
     author: 'Chloe McDowell',
-    date: '2022-12-17',
-    likes: 32,
+    date: '2022-09-17',
+    likes: 72,
     src: '/images/thumbnail2.jpg',
     contents: (
       <>
@@ -193,7 +193,7 @@ const posts = [
   },
   {
     id: 4,
-    header: "jonghwi's devlog",
+    header: "kylie's devlog",
     title: 'What is the Network?',
     desc: 'It’s helpful to know where your application code is stored and run once it’s deployed to the network. You can think of the network as linked computers (or servers) capable of sharing resources.',
     author: 'Kylie Rose',

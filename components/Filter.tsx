@@ -1,5 +1,6 @@
 import { AiOutlineRise, AiOutlineFieldTime } from 'react-icons/ai'
 import { BiDotsVerticalRounded } from 'react-icons/bi'
+import Link from 'next/link'
 
 const Filter = ({ trendingTab, setTrendingTab }: any) => {
   return (
@@ -32,10 +33,10 @@ const Filter = ({ trendingTab, setTrendingTab }: any) => {
           className='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
         >
           <li>
-            <a>About</a>
+            <Link href='/about'>About</Link>
           </li>
           <li>
-            <a>Contact</a>
+            <a href='mailto:johnnykim94@hotmail.com'>Contact</a>
           </li>
         </ul>
       </div>
