@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn, FaYoutube } from 'react-icons/fa'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-const post = () => {
+const Post = () => {
   const router = useRouter()
   const id: any = router.query['id']
 
@@ -78,4 +78,4 @@ const post = () => {
   )
 }
 
-export default post
+export default Post

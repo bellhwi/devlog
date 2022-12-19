@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer'
 import Link from 'next/link'
 
-export default function about() {
+export default function About() {
   return (
     <div className='container w-11/12 mx-auto'>
       <Head>
@@ -30,7 +30,7 @@ export default function about() {
         >
           velog
         </a>
-        , the developer's blog. This is part of{' '}
+        , the developer&apos;s blog. This is part of{' '}
         <a
           className='underline'
           href='http://jonghwikim.com/'
