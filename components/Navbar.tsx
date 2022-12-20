@@ -11,8 +11,6 @@ import { posts } from '../posts'
 type Props = {
   home?: Boolean
   header?: String
-  darkMode?: Boolean
-  setDarkMode?: any
 }
 
 interface RootState {
@@ -46,33 +44,36 @@ const Navbar = ({ home, header }: Props) => {
       )}
 
       <div className='grow'></div>
-      <div className='items-center mr-4 hidden sm:flex'>
-        <MdSearch className='text-2xl mr-0.5' />
-        <input
-          type='text'
-          placeholder='Search by title'
-          className='input input-xs border-0 focus:outline-0 border-b border-current w-full max-w-sm block mx-auto'
-          onChange={(e) => {
-            // Searching keywords
-            if (e.target.value != '') {
-              const searchedPosts = posts.filter((post: any) => {
-                return post.title
-                  .toLowerCase()
-                  .includes(e.target.value.toLowerCase())
-              })
+      {home ? (
+        <div className='items-center mr-4 hidden sm:flex'>
+          <MdSearch className='text-2xl mr-0.5' />
+          <input
+            type='text'
+            placeholder='Search by title'
+            className='input input-xs border-0 focus:outline-0 border-b border-current w-full max-w-sm block mx-auto'
+            onChange={(e) => {
+              // Searching keywords
+              if (e.target.value != '') {
+                const searchedPosts = posts.filter((post: any) => {
+                  return post.title
+                    .toLowerCase()
+                    .includes(e.target.value.toLowerCase())
+                })
 
-              dispatch(setSearchedPosts(searchedPosts))
+                dispatch(setSearchedPosts(searchedPosts))
 
-              if (searchMode) return
-              dispatch(setSearchMode(true))
-            }
-            // Empty search input
-            else {
-              dispatch(setSearchMode(false))
-            }
-          }}
-        />
-      </div>
+                if (searchMode) return
+                dispatch(setSearchMode(true))
+              }
+              // Empty search input
+              else {
+                dispatch(setSearchMode(false))
+              }
+            }}
+          />
+        </div>
+      ) : null}
+
       <div className='flex items-center'>
         <button
           onClick={() => {
