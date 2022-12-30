@@ -32,9 +32,9 @@
 
 ## Features
 
+- 🌗 Light / dark mode: [Example code](https://github.com/bellhwi/devlog/blob/main/components/Navbar.tsx)
 - 🔍 Search blog post: [Example code](https://github.com/bellhwi/devlog/blob/main/components/Navbar.tsx)
 - 🗃️ Sort posts: [Example code](https://github.com/bellhwi/devlog/blob/main/components/Sort.tsx)
-- 🌗 Light / dark mode: [Example code](https://github.com/bellhwi/devlog/blob/main/components/Navbar.tsx)
 - 📱 Responsive design
 
 ## Tech
