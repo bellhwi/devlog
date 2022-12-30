@@ -1,6 +1,6 @@
 import Card from './Card'
 import { DateTime } from 'luxon'
-import Filter from './Filter'
+import Sort from './Sort'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { posts } from '../posts'
@@ -38,7 +38,7 @@ const Main = () => {
 
   return (
     <div>
-      <Filter trendingTab={trendingTab} setTrendingTab={setTrendingTab} />
+      <Sort trendingTab={trendingTab} setTrendingTab={setTrendingTab} />
       <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-3 mt-4'>
         {searchMode
           ? trendingTab
